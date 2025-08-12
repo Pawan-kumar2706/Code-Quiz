@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive quiz</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="start-screen" class="start-screen">
+            <h2>Welcome to the Quiz!</h2>
+            <button id="start-btn" class="btn-primary">Start Quiz</button>
+        </div>
+
+        <div class="container">
+            <div class="quiz-container" id="quiz">
+                <div class="quiz-header">
+                    <h2 class="quiz-title">
+                        Interactive Quiz
+                        <button id="hint-btn" class="hint-icon-btn" title="Show Hint">
+                            <i class="fas fa-lightbulb"></i>
+                        </button>
+                    </h2>
+
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+                <div id="question-container">
+                    <p class="question" id="question"></p>
+                    <div class="options" id="options"></div>
+                    <div id="answer-feedback" class="answer-feedback"></div>
+                </div>
+
+                <div class="quiz-footer">
+                    <div class="timer" id="timer">Time: 30s</div>
+                    <button class="btn btn-primary" id="next-btn">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hint Modal -->
+    <div id="hint-popover" class="hint-popover" style="display: none;">
+        <span class="close-btn" id="close-hint">&times;</span>
+        <p id="hint-text"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
